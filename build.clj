@@ -2,7 +2,7 @@
   (:require [clojure.tools.build.api :as b]
             [deps-deploy.deps-deploy :as dd]))
 
-(def lib     'io.github.dokosho02/clj-epub)
+(def lib     'org.clojars.dokosho02/clj-epub)
 (def version "1.0.0")
 (def class-dir "target/classes")
 (def basis (b/create-basis {:project "deps.edn"}))
@@ -73,5 +73,5 @@
               :artifact   jar-file
               :pom-file   (b/pom-path {:lib lib :class-dir class-dir})
               :repository {"clojars" {:url      "https://repo.clojars.org"
-                                     :username (System/getenv "CLOJARS_USERNAME")
-                                     :password (System/getenv "CLOJARS_PASSWORD")}}}))
+                                      :username (System/getenv "CLOJARS_USERNAME")
+                                      :password (System/getenv "CLOJARS_PASSWORD")}}}))

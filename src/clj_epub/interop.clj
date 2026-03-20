@@ -5,7 +5,7 @@
   Clojure functions directly.
 
   Usage from Java:
-    import io.github.dokosho02.EpubBuilder;
+    import org.clojars.dokosho02.EpubBuilder;
 
     byte[] bytes = new EpubBuilder()
         .title(\"My Book\")
@@ -16,7 +16,7 @@
   "
   (:require [clj-epub.core :as epub])
   (:gen-class
-   :name    io.github.dokosho02.EpubBuilder
+   :name    org.clojars.dokosho02.EpubBuilder
    :state   state
    :init    init
    :prefix  "builder-"
