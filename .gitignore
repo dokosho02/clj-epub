@@ -1,0 +1,6 @@
+# clojure
+.cpcache
+.cljs_node_repl
+
+.clj-kondo/
+.lsp/
