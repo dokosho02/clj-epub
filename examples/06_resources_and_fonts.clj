@@ -40,14 +40,14 @@
               :content "<h1>Chapter 2: Images</h1>
                         <p>Below is an embedded figure:</p>
                         <figure>
-                          <img src=\"../Images/diagram.png\" alt=\"Architecture Diagram\"/>
+                          <img src=\"../Images/diagram.jpg\" alt=\"Architecture Diagram\"/>
                           <figcaption>Figure 1: System Architecture</figcaption>
                         </figure>"}]
 
   ;; Custom CSS with @font-face declaration
   :css "@font-face {
   font-family: 'SourceSerif';
-  src: url('../Fonts/SourceSerif4-Regular.otf') format('opentype');
+  src: url('../Fonts/Vollkorn-Regular.ttf') format('truetype');
   font-weight: normal;
 }
 body {
@@ -62,13 +62,13 @@ img { max-width: 100%; height: auto; }"
 
   ;; Extra resources: fonts and images
   :resources [{:id         "font-regular"
-               :href        "Fonts/SourceSerif4-Regular.otf"
-               :media-type  "font/otf"
-               :data        (read-bytes "SourceSerif4-Regular.otf")}
+               :href        "Fonts/Vollkorn-Regular.ttf"
+               :media-type  "font/ttf"
+               :data        (read-bytes "Vollkorn-Regular.ttf")}
 
               {:id         "img-diagram"
-               :href        "Images/diagram.png"
-               :media-type  "image/png"
-               :data        (read-bytes "diagram.png")}]}
+               :href        "Images/diagram.jpg"
+               ;; :media-type  "image/jpg"
+               :data        (read-bytes "diagram.jpg")}]}
 
  "06-resources-and-fonts.epub")
