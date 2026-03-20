@@ -29,13 +29,13 @@ A Clojure library for generating **EPUB3** ebooks, with full EPUB2 backward comp
 ### deps.edn
 
 ```clojure
-{:deps {org.clojars.dokosho02/clj-epub {:mvn/version "1.0.0"}}}
+{:deps {org.clojars.dokosho02/clj-epub {:mvn/version "1.0.1"}}}
 ```
 
 ### Leiningen / Boot
 
 ```clojure
-[org.clojars.dokosho02/clj-epub "1.0.0"]
+[org.clojars.dokosho02/clj-epub "1.0.1"]
 ```
 
 ### Maven
@@ -44,7 +44,7 @@ A Clojure library for generating **EPUB3** ebooks, with full EPUB2 backward comp
 <dependency>
   <groupId>org.clojars.dokosho02</groupId>
   <artifactId>clj-epub</artifactId>
-  <version>1.0.0</version>
+  <version>1.0.1</version>
 </dependency>
 ```
 
