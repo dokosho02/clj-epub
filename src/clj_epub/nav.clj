@@ -74,8 +74,7 @@
                            (when (seq landmarks)
                              ;; landmarks nav: provides reachability for non-linear items
                              ;; (cover, nav itself) — required by epubcheck OPF-096
-                             (nav-section "landmarks" "landmarks" nil true landmarks))
-                           ])
+                             (nav-section "landmarks" "landmarks" nil true landmarks))])
         html
         (str "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n"
              "<!DOCTYPE html>\n"
@@ -113,8 +112,7 @@
 
 (defn default-landmarks
   "Build a standard landmarks nav from cover/toc/bodymatter hrefs."
-  [{:keys [cover-href toc-href body-href]}]
+  [{:keys [cover-href toc-href]}]
   (remove nil?
           [(when cover-href   {:title "Cover"       :href cover-href   :epub-type "cover"})
-           (when toc-href     {:title "Contents"    :href toc-href     :epub-type "toc"})
-           (when body-href    {:title "Begin Reading" :href body-href  :epub-type "bodymatter"})]))
+           (when toc-href     {:title "Contents"    :href toc-href     :epub-type "toc"})]))

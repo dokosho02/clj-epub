@@ -9,7 +9,7 @@
 
   <groupId>org.clojars.dokosho02</groupId>
   <artifactId>clj-epub</artifactId>
-  <version>1.0.0</version>
+  <version>1.0.1</version>
   <packaging>jar</packaging>
 
   <name>clj-epub</name>
@@ -36,7 +36,7 @@
     <connection>scm:git:git://github.com/dokosho02/clj-epub.git</connection>
     <developerConnection
         >scm:git:ssh://git@github.com:dokosho02/clj-epub.git</developerConnection>
-    <tag>v1.0.0</tag>
+    <tag>v1.0.1</tag>
   </scm>
 
   <dependencies>

@@ -225,14 +225,15 @@
         ;; Cover: first linear=false chapter (no id naming convention required)
         cover-ch    (or (first (filter #(= (:id %) "cover") chapters))
                         (first (filter #(false? (:linear %)) chapters)))
-        body-ch     (first (filter #(not (false? (:linear %))) chapters))
+        ;; body-ch     (first (filter #(not (false? (:linear %))) chapters))
         lmarks      (or landmarks
                         (nav/default-landmarks
                          {:cover-href  (some-> cover-ch :href)
                           ;; toc-href intentionally nil: nav.xhtml is not in spine,
                           ;; pointing landmarks toc at it triggers epubcheck RSC-011
                           :toc-href    nil
-                          :body-href   (some-> body-ch :href)}))
+                          ;; :body-href   (some-> body-ch :href)
+                          }))
         ;; nav.xhtml is at OEBPS root, so CSS path is relative from there
         nav-css     (when css-href css-href)]
     (nav/generate {:title     (or title "Contents")

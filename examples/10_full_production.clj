@@ -81,32 +81,31 @@ code {
   :cover {:image-href "Images/cover.jpg"
           :image-data (read-bytes "cover.jpg")}
 
-  :chapters [
-   ;; Cover page: linear=false, excluded from linear reading flow.
-   {:id      "cover-page"
-    :title   "Cover"
-    :href    "Text/cover.xhtml"
-    :content "<div id=\"cover\">
+  :chapters [   ;; Cover page: linear=false, excluded from linear reading flow.
+             {:id      "cover-page"
+              :title   "Cover"
+              :href    "Text/cover.xhtml"
+              :content "<div id=\"cover\">
                 <img src=\"../Images/cover.jpg\" alt=\"The Art of Clojure\"/>
               </div>"
-    :linear  false}
+              :linear  false}
 
    ;; Title page: generated using the xhtml/title-page template.
-   {:id    "titlepage"
-    :title "Title Page"
-    :href  "Text/titlepage.xhtml"
-    :data  (xhtml/->bytes
-            (xhtml/title-page {:title     "The Art of Clojure"
-                               :author    "Rich Hickey & Stuart Halloway"
-                               :publisher "Pragmatic Bookshelf"
-                               :date      "2024"
-                               :css-href  "../Styles/stylesheet.css"}))}
+             {:id    "titlepage"
+              :title "Title Page"
+              :href  "Text/titlepage.xhtml"
+              :data  (xhtml/->bytes
+                      (xhtml/title-page {:title     "The Art of Clojure"
+                                         :author    "Rich Hickey & Stuart Halloway"
+                                         :publisher "Pragmatic Bookshelf"
+                                         :date      "2024"
+                                         :css-href  "../Styles/stylesheet.css"}))}
 
    ;; Body chapters
-   {:id      "ch01"
-    :title   "Part I: Philosophy"
-    :href    "Text/ch01.xhtml"
-    :content "<h1>Part I: Philosophy</h1>
+             {:id      "ch01"
+              :title   "Part I: Philosophy"
+              :href    "Text/ch01.xhtml"
+              :content "<h1>Part I: Philosophy</h1>
               <h2 id=\"simplicity\">Simplicity</h2>
               <p>Simplicity is the art of maximizing the amount of work not done.</p>
               <blockquote>\"Simple is not easy.\" — Rich Hickey</blockquote>
@@ -114,43 +113,42 @@ code {
               <p>Values never change. Identity is separate from state.</p>"
     ;; Nested TOC: sub-entry hrefs contain fragments, which the library strips automatically.
     ;; To preserve fragments, add matching id attributes in the chapter :content.
-    :toc    [{:title "Simplicity"   :href "Text/ch01.xhtml#simplicity"}
-             {:title "Immutability" :href "Text/ch01.xhtml#immutability"}]}
+              :toc    [{:title "Simplicity"   :href "Text/ch01.xhtml#simplicity"}
+                       {:title "Immutability" :href "Text/ch01.xhtml#immutability"}]}
 
-   {:id      "ch02"
-    :title   "Part II: Data Model"
-    :href    "Text/ch02.xhtml"
-    :content "<h1>Part II: Data Model</h1>
+             {:id      "ch02"
+              :title   "Part II: Data Model"
+              :href    "Text/ch02.xhtml"
+              :content "<h1>Part II: Data Model</h1>
               <p>Clojure's persistent data structures provide structural sharing
               for efficient immutable updates.</p>
               <p>The four fundamental structures are: lists, vectors, maps, sets.</p>"}
 
-   {:id      "ch03"
-    :title   "Part III: Concurrency"
-    :href    "Text/ch03.xhtml"
-    :content "<h1>Part III: Concurrency</h1>
+             {:id      "ch03"
+              :title   "Part III: Concurrency"
+              :href    "Text/ch03.xhtml"
+              :content "<h1>Part III: Concurrency</h1>
               <p>Clojure separates identity from state. Atoms, refs, and agents
               provide different concurrency semantics.</p>
               <p>Use <code>atom</code> for uncoordinated, synchronous updates.
               Use <code>ref</code> with STM for coordinated updates.</p>"}
 
-   {:id      "appendix"
-    :title   "Appendix: Cheat Sheet"
-    :href    "Text/appendix.xhtml"
-    :content "<h1>Appendix: Cheat Sheet</h1>
+             {:id      "appendix"
+              :title   "Appendix: Cheat Sheet"
+              :href    "Text/appendix.xhtml"
+              :content "<h1>Appendix: Cheat Sheet</h1>
               <p>Quick reference for the most commonly used functions.</p>"}]
 
-  :css my-book-css  ; Use the full CSS defined above
+  :css book-css  ; Use the full CSS defined above
 
-  :resources [
-   {:id         "font-regular"
-    :href        "Fonts/SourceSerif4-Regular.otf"
-    :media-type  "font/otf"
-    :data        (read-bytes "SourceSerif4-Regular.otf")}
-   {:id         "font-bold"
-    :href        "Fonts/SourceSerif4-Bold.otf"
-    :media-type  "font/otf"
-    :data        (read-bytes "SourceSerif4-Bold.otf")}]
+  :resources [{:id         "font-regular"
+               :href        "Fonts/SourceSerif4-Regular.otf"
+               :media-type  "font/otf"
+               :data        (read-bytes "SourceSerif4-Regular.otf")}
+              {:id         "font-bold"
+               :href        "Fonts/SourceSerif4-Bold.otf"
+               :media-type  "font/otf"
+               :data        (read-bytes "SourceSerif4-Bold.otf")}]
 
   :options {:epub2-compat true}}  ; Include toc.ncx for compatibility with older readers
 
