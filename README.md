@@ -132,7 +132,7 @@ Pass these to `clj-epub.zip/write-epub!` or `clj-epub.zip/epub->bytes`.
 | `:id` | string | **yes** | Unique manifest ID (no spaces, e.g. `"ch01"`) |
 | `:title` | string | **yes** | Display title (used in TOC) |
 | `:href` | string | **yes** | Path inside OEBPS (`"Text/ch01.xhtml"`) |
-| `:content` | string | one of | Raw inner HTML/XHTML for body |
+| `:content` | string | one of | Well-formed raw inner HTML/XHTML for body |
 | `:data` | bytes | one of | Pre-rendered XHTML byte array (bypasses wrapping) |
 | `:linear` | boolean | no | `false` to exclude from spine linear order (default `true`) |
 | `:toc` | seq | no | Nested TOC entries: `[{:title "..." :href "...#id" :toc [...]}]` |
