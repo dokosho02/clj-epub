@@ -6,6 +6,7 @@ This library is in alpha now!
 
 A Clojure library for generating **EPUB3** ebooks, with full EPUB2 backward compatibility and Epubcheck compatibility.
 
+[![Clojars Project](https://img.shields.io/clojars/v/org.clojars.dokosho02/clj-epub.svg)](https://clojars.org/org.clojars.dokosho02/clj-epub)
 [![Clojure CI](https://img.shields.io/badge/clojure-1.12-blue)](https://clojure.org)
 [![License](https://img.shields.io/badge/license-EPL--2.0-green)](LICENSE)
 [![Maven Central](https://img.shields.io/badge/maven-1.0.0-orange)](https://central.sonatype.com)
